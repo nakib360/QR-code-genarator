@@ -40,22 +40,22 @@ const Front = () => {
   }
   return (
     <div>
-      <p className="font-bold text-4xl text-center py-10">
+      <p className="font-bold text-4xl text-center py-10 bg-gradient-to-tl from-[#1D2B64] to-[#F8CDDA] bg-clip-text text-transparent">
         Genarate Your custom QR code
       </p>
-      <div className="flex flex-col-reverse md:flex-row  justify-center items-center gap-10">
+      <div className="flex flex-col-reverse md:flex-row  justify-center md:items-center gap-y-10 md:gap-10">
         <div className="relative">
           <textarea
             onChange={textChangeHandler}
-            className="border border-white rounded-2xl h-50 md:h-100 w-100 p-5 pb-10 focus:outline-none resize-none"
+            className="border border-white rounded-2xl h-50 md:h-100 w-full md:w-100 p-5 pb-10 focus:outline-none resize-none"
             maxLength={2000}
             placeholder="Enter Hare Your Text"
           />
           <p className="absolute bottom-1 right-3">{textLength}/2000</p>
         </div>
-        <div className="border border-white rounded-2xl h-100 w-100" ref={qrRef}>
+        <div className="border border-white rounded-2xl h-auto md:h-auto w-full md:w-100" ref={qrRef}>
           <QRCode
-            className="h-99.5 w-99.5 rounded-2xl"
+            className="h-full w-full rounded-2xl border-10 border-white"
             level="H"
             fgColor=""
             value={text}
@@ -63,7 +63,7 @@ const Front = () => {
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <button onClick={downloadQrCode} className="bg-blue-900 px-3 py-3 min-w-[96%] md:min-w-[62%] rounded-xl mt-5 ">
+        <button onClick={downloadQrCode} className="bg-blue-900 px-3 py-3 min-w-full md:min-w-[62%] rounded-xl mt-5 ">
           Download QR code
         </button>
       </div>
