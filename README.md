@@ -1,1 +1,1 @@
-[live link](https://qr-code-genarator.nakib360.netlify.app)
+[live link](https://qr-code-genarator-nakib360.netlify.app/)
